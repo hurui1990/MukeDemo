@@ -100,8 +100,8 @@ function setDetailContent(value) {
   var fenlei = document.getElementsByClassName("fenlei_detail")[0];
   var tuijian = document.getElementsByClassName("tuijian_detail")[0];
   if(value == "前端开发"){
-    fenlei.innerHTML = "基础：<a href='#'>HTML/CSS</a> / <a href='#'>JavaScript</a> / <a href='#'>JQuery</a><p style='height: 10px'></p>" +
-      "进阶：<a href='#'>Html5</a> / <a href='#'>CSS3</a>/ <a href='#'>Node.js</a> / <a href='#'>AngularJS</a> / <a href='#'>Bootstrap</a> / <a href='#'>React</a> / <a href='#'>Vue.js</a><p style='height: 10px'></p>" +
+    fenlei.innerHTML = "<a>基础</a>：<a href='#'>HTML/CSS</a> / <a href='#'>JavaScript</a> / <a href='#'>JQuery</a><p style='height: 10px'></p>" +
+      "进阶：<a href='#'>Html5</a> / <a href='#'>CSS3</a> / <a href='#'>Node.js</a> / <a href='#'>AngularJS</a> / <a href='#'>Bootstrap</a> / <a href='#'>React</a> / <a href='#'>Vue.js</a><p style='height: 10px'></p>" +
       "其他：<a href='#'>前端工具</a>";
     tuijian.innerHTML = "<a href='#'>职业路径</a>" +
       "<a href='#'>前端小白入门手册</a><p style='height: 15px'></p>"+
@@ -110,7 +110,9 @@ function setDetailContent(value) {
       "<a href='#'>实战</a>" +
       "<a href='#'>Vue+Node+MongoDB高级全栈开发</a><p style='height: 15px'></p>"+
       "<a href='#'>实战</a>" +
-      "<a href='#'>Spring Boot微信点餐系统</a>";
+      "<a href='#'>Spring Boot微信点餐系统</a><p style='height: 15px'></p>"+
+      "<a href='#'>课程</a>" +
+      "<a href='#'>JS插件开发之LightBox图片画廊(下)</a>";
   }else if(value == "后端开发"){
     fenlei.innerHTML = "<a href='#'>PHP</a> / <a href='#'>Java</a> / <a href='#'>Python</a> / <a href='#'>C</a> / <a href='#'>C++</a> / <a href='#'>Go</a> / <a href='#'>C#</a> / <a href='#'>Ruby</a> /";
     tuijian.innerHTML = "<a href='#'>职业路径</a>" +
@@ -120,7 +122,9 @@ function setDetailContent(value) {
       "<a href='#'>实战</a>" +
       "<a href='#'>高性能 高价值的PHP API接口开发</a><p style='height: 15px'></p>"+
       "<a href='#'>实战</a>" +
-      "<a href='#'>基于Selenium的Web自动化测试</a>";
+      "<a href='#'>基于Selenium的Web自动化测试</a><p style='height: 15px'></p>"+
+      "<a href='#'>课程</a>" +
+      "<a href='#'>Spring MVC拦截器</a>";
   }else if(value == "移动开发"){
     fenlei.innerHTML = "<a href='#'>Android</a> / <a href='#'>iOS</a> / <a href='#'>Unity 3D</a> / <a href='#'>Cocos2d-x</a> /";
     tuijian.innerHTML = "<a href='#'>职业路径</a>" +
@@ -132,7 +136,7 @@ function setDetailContent(value) {
       "<a href='#'>实战</a>" +
       "<a href='#'>Kotlin系统入门与进阶</a><p style='height: 15px'></p>"+
       "<a href='#'>课程</a>" +
-      "<a href='#' >Andriod中的马大姐与周大嘴ContentProvider与BroadcastReceiver</a>";
+      "<a href='#' >Android-见证消息推送时刻进阶篇</a>";
   }else if(value == "数据库"){
     fenlei.innerHTML = "<a href='#'>MySQL</a> / <a href='#'>MongoDB</a> / <a href='#'>Oracle</a> / <a href='#'>SQL Server</a> /";
     tuijian.innerHTML = "<a href='#'>实战</a>" +
@@ -181,13 +185,13 @@ function setDetailContent(value) {
       isNeedRed = true;
       spanItem.style.color = "red";
       spanItem.style.background = "#ffe5d7";
-      spanItem.style.fontSize = "0.9em";
-      spanItem.style.padding = "5px 10px";
+      spanItem.style.fontSize = "0.8em";
+      spanItem.style.padding = "3px 10px";
     }else if(spanItem.innerHTML == "课程" || spanItem.innerHTML == "实战"){
       spanItem.style.color = "black";
       spanItem.style.background = "#e2e2e2";
-      spanItem.style.fontSize = "0.9em";
-      spanItem.style.padding = "5px 10px";
+      spanItem.style.fontSize = "0.8em";
+      spanItem.style.padding = "3px 10px";
     }else {
       if(i!=0){
         spanItem.style.marginLeft = "10px";
@@ -200,6 +204,10 @@ function setDetailContent(value) {
       }
     }
   }
+}
+
+function aHover(obj) {
+  obj.style.color = "red";
 }
 
 //设置课程详细内容对话框的样式
