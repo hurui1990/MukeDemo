@@ -7,6 +7,7 @@ var isOutNav = true;
 
 var divObj = document.getElementsByClassName("main_type_detail")[0];
 
+//对图片进行预加载，避免切换背景的时候出现闪烁
 var imgar = [];
 for(i=1;i<8;i++){
   imgar[i] = new Image();
@@ -17,6 +18,7 @@ for(i=1;i<8;i++){
   }
 }
 
+//定时循环切换banner条背景
 function changeBackImg() {
   setInterval(function () {
     var backGroundImg = document.getElementsByClassName("main_type")[0];
@@ -36,14 +38,15 @@ function changeBackImg() {
   }, 8000);
 }
 
+//购物车搜索框获取焦点
 function setFocus() {
   var placeholderObj = document.getElementsByClassName("moniplaceholder")[0];
   var inputObj = document.getElementById("searchtext");
   placeholderObj.style.display = "none";
   inputObj.focus();
-
 }
 
+//点击购物车搜索栏中的标签的动作
 function goToXiaobai() {
   var placeholderObj = document.getElementsByClassName("moniplaceholder")[0];
   var inputObj = document.getElementById("searchtext");
@@ -52,6 +55,7 @@ function goToXiaobai() {
   alert("开始前端学习");
 }
 
+//点击购物车搜索栏中的标签的动作
 function goToJava() {
   var placeholderObj = document.getElementsByClassName("moniplaceholder")[0];
   var inputObj = document.getElementById("searchtext");
@@ -60,11 +64,13 @@ function goToJava() {
   alert("开始Java学习");
 }
 
+//隐藏购物车搜索栏中的标签
 function displayPlaceholder() {
   var placeholderObj = document.getElementsByClassName("moniplaceholder")[0];
   placeholderObj.style.display = "block";
 }
 
+//显示课程分类，以对话框的形式
 function displayClassDetail(obj) {
   isOutNav = false;
   var aObj = obj.getElementsByTagName("a")[0];
@@ -89,6 +95,7 @@ function displayClassDetail(obj) {
   setDetailContent(value);
 }
 
+//设置课程分类中的详细内容
 function setDetailContent(value) {
   var fenlei = document.getElementsByClassName("fenlei_detail")[0];
   var tuijian = document.getElementsByClassName("tuijian_detail")[0];
@@ -195,6 +202,7 @@ function setDetailContent(value) {
   }
 }
 
+//设置课程详细内容对话框的样式
 function setDetailStyle(detail) {
   if(!isOutNav){
     detail.style.width = "50%";
