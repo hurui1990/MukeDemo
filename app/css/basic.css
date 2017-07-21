@@ -281,6 +281,16 @@
   float: left;
 }
 
+.main_type_work img:hover{
+  animation: imgAnimation 0.1s 1 linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes imgAnimation {
+  from {transform: translateY(0px)}
+  to {transform: translateY(-5px)}
+}
+
 .free_class{
   width: 94%;
   height: 308px;
@@ -327,7 +337,7 @@
   width: 224px;
   height: 228px;
   line-height: 228px;
-  box-shadow: 5px 5px 10px #cecece;
+  box-shadow: 2px 2px 10px #cecece;
   border-radius: 5px;
 }
 
@@ -349,6 +359,18 @@
 .free_class .all_class .class_item{
   float: left;
   margin-right: 20px;
+}
+
+.free_class .all_class .class_item:hover{
+  animation: out 0.5s 1 linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes out {
+  from {box-shadow: 2px 2px 10px  #cecece}
+  to {box-shadow: 10px 10px 10px  #cecece}
+  from {transform: scale(1)}
+  to {transform: scale(1.01)}
 }
 
 .free_class .all_class .class_item .first_span{
