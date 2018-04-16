@@ -4,6 +4,8 @@
 
 ### 效果展示
 
-<video id="video" controls="" preload="none">
-    <source id="mp4" src="https://github.com/hurui1990/MukeDemo/blob/master/video/mukedemo.mp4" type="video/mp4">
-</video>
+<div>
+<img src="https://github.com/hurui1990/MukeDemo/blob/master/pictures/picture1.png"></img>
+<img src="https://github.com/hurui1990/MukeDemo/blob/master/pictures/picture2.png"></img>
+<img src="https://github.com/hurui1990/MukeDemo/blob/master/pictures/picture3.png"></img>
+</div>
