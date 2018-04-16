@@ -2,7 +2,7 @@
 
 ### Html + css + js
 
-### 效果展示
+### 图片效果展示
 
 <div>
 <p>效果图1</p>
@@ -14,3 +14,5 @@
 <p>效果图3</p>
 <img src="https://github.com/hurui1990/MukeDemo/blob/master/pictures/picture3.png"></img>
 </div>
+
+<h3><a href="https://github.com/hurui1990/MukeDemo/tree/master/video">点击观看视频效果展示</a></h3>
